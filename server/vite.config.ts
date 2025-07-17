@@ -24,6 +24,9 @@ export default defineConfig(async ({ mode }) => {
           fileName: 'static/client',
         },
       },
+      server: {
+        cors: false, // disable Vite's built-in CORS setting
+      },
     }
   }
 
@@ -37,5 +40,8 @@ export default defineConfig(async ({ mode }) => {
         entry: 'src/index.tsx',
       }),
     ],
+    server: {
+      cors: false, // disable Vite's built-in CORS setting
+    },
   }
 })
